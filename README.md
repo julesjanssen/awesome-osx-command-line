@@ -754,9 +754,8 @@ spctl --remove /path/to/Application.app
 ### Passwords
 
 #### Generate Secure Password and Copy to Clipboard
-First, install `pwgen` via Homebrew, etc.
 ```bash
-pwgen -Cs 20 1 | tr -d ' ' | tr -d '\n' | pbcopy
+openssl rand -base64 24 | pbcopy
 ```
 
 ### Physical Access
